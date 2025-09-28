@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Para ti, mi amor ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Pantalla de entrada -->
+  <div id="inicio" class="pantalla">
+    <div class="contenedor-inicio">
+      <h1>¿Recuerdas nuestra fecha especial?</h1>
+      <p>Ingresa la fecha de nuestro aniversario:</p>
+      <input type="date" id="inputFecha" />
+      <button id="btnVerificar">Verificar</button>
+      <p id="mensajeError" class="error"></p>
+    </div>
+  </div>
+
+  <!-- Pantalla de éxito -->
+  <div id="exito" class="pantalla oculta">
+    <div class="contenedor-exito">
+      <h1>¡Te amo! ❤️</h1>
+      <p>Gracias por estar siempre a mi lado.</p>
+    </div>
+  </div>
+
+  <!-- Corazones animados -->
+  <div id="corazones"></div>
+
+  <!-- Audio (oculto) -->
+  <audio id="musicaFondo" loop>
+    <source src="audio/Hens_Walls_Me_Encantas.m4a" type="audio/mpeg">
+    Tu navegador no soporta audio.
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('imagenes/HxI.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.pantalla {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.oculta {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.contenedor-inicio {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 90%;
+  width: 350px;
+}
+
+.contenedor-inicio h1 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.contenedor-inicio p {
+  margin: 0.8rem 0;
+}
+
+input[type="date"] {
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+button {
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+  background: #ff2e59;
+  transform: scale(1.05);
+}
+
+.error {
+  color: #ff6b6b;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+}
+
+/* Pantalla de éxito */
+.contenedor-exito {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 90%;
+  width: 400px;
+}
+
+.contenedor-exito h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: latido 1.5s infinite;
+}
+
+@keyframes latido {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Corazones animados */
+#corazones {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.corazon {
+  position: absolute;
+  font-size: 24px;
+  opacity: 0;
+  animation: flotar 6s ease-in forwards;
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+    opacity: 0;
+  }
+}
